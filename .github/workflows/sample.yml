@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: logger
-        uses: kuboon/gsheet-slack-logger@main
+        uses: hiroshinomura/slack-backup@main
+#        uses: kuboon/gsheet-slack-logger@main
         with:
           timezone: 'Asia/Tokyo'
           slackToken: ${{ secrets.SLACK_TOKEN }}
-          googleClientEmail: slack-logger@kuboon-dev.iam.gserviceaccount.com
+          googleClientEmail: slack-logger@gsheet-slack-logger-358003.iam.gserviceaccount.com
           googlePrivateKey: ${{ secrets.GOOGLE_PRIVATE_KEY }}
-          folderId: 1y-Q3khgg3sU7ApWf5AxmWqbngb4Li8wn
+          folderId: 1-ekgw05T8hgCWOvPlHOYemwrJEbRmPvM
           autoJoin: true
           skipChannels: ''
