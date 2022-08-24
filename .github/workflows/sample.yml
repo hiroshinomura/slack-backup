@@ -20,5 +20,4 @@ jobs:
           folderId: 1-ekgw05T8hgCWOvPlHOYemwrJEbRmPvM
           autoJoin: true
           skipChannels: ''
-          year: 2022
-          month: 5
+
