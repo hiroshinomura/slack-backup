@@ -22,3 +22,4 @@ jobs:
           skipChannels: ''
           year: 2022
           month: 5
+          day: 1
