@@ -1,0 +1,35 @@
+name: 'gsheet-slack-logger'
+description: 'Get your slack log and generate google sheet'
+inputs:
+  timezone:
+    required: true
+    description: 'your current timezone'
+    default: 'Asia/Tokyo'
+  slackToken:
+    required: true
+    description: 'slack bot token with required scopes'
+  googleClientEmail:
+    required: true
+    description: 'email of google service account'
+  googlePrivateKey:
+    required: true
+    description: 'private_key for google service account'
+  folderId:
+    required: true
+    description: 'google drive folder id'
+  year:
+    required: false
+    description: 'target year'
+  month:
+    required: false
+    description: 'target month'
+  autoJoin:
+    required: false
+    description: Join to all public channel. need channels:join scope
+    default: true
+  skipChannels:
+    required: false
+    description: Array of channel id which should skip
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
