@@ -1,0 +1,16 @@
+# .github/workflows/slack-backup.yml
+name: slack-backup
+
+on:  [ workflow_dispatch ]
+  
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kuboon/gsheet-slack-logger@main
+        with:
+          timezone: 'Asia/Tokyo'
+          slackToken: ${{ secrets.SLACK_TOKEN }}
+          googleClientEmail: slack-logger@gsheet-slack-logger-358003.iam.gserviceaccount.com # 作成したサービスアカウントの email
+          googlePrivateKey: ${{ secrets.GOOGLE_PRIVATE_KEY }}
+          folderId: 1-ekgw05T8hgCWOvPlHOYemwrJEbRmPvM
